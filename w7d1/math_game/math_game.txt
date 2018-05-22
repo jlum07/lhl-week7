@@ -13,6 +13,7 @@ class Game
   question
   * run
   * gernerate_question
+  * ask_question???
   * check_answer?????
   * next_player
   * game_over?
@@ -23,4 +24,5 @@ class Game
 class Question
   @first_num
   @second_num
+  * ask_question???
   *check_answer????
