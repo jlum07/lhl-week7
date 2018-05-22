@@ -1,0 +1,26 @@
+class Player
+  @lives
+  * dead?
+  * lose_life
+  * summary
+
+
+class Game
+  player1
+  player2
+  @players = [player1, player2]
+  @current_player
+  question
+  * run
+  * gernerate_question
+  * check_answer?????
+  * next_player
+  * game_over?
+  * summary
+  * find_winner
+
+
+class Question
+  @first_num
+  @second_num
+  *check_answer????
