@@ -6,4 +6,5 @@ puts "TwO-O-Player Math Game"
 
 game.run
 
-puts "Thank you for playing!"
+puts "----- GAME OVER -----"
+puts "Good bye!"

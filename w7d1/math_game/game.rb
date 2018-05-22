@@ -14,14 +14,6 @@ class Game
     puts "#{@current_player.name}: What does #{@question.first_num} plus #{@question.second_num} equal?"
   end
 
-  # def check_answer(a)
-  #   if a == @question.answer
-  #     return true
-  #   else
-  #     return false
-  #   end
-  # end
-
   def check_answer(a)
     if a == @question.answer
       puts "#{@current_player.name}: YES! You are correct."
@@ -47,6 +39,10 @@ class Game
     @players = @players.rotate
   end
 
+  def find_winner
+    players.first
+  end
+
   def run
     while !game_over?
 
@@ -58,25 +54,20 @@ class Game
 
       puts "----- NEW TURN -----"
 
-      puts "#{@current_player.name}: What does #{@question.first_num} plus #{@question.second_num} equal?"
+      # puts "#{@current_player.name}: What does #{@question.first_num} plus #{@question.second_num} equal?"
+      ask_question
 
-      puts ">"
+
+      print ">"
       player_answer = gets.chomp.to_i
-
-      # if check_answer(player_answer)
-      #   puts "#{@current_player.name}: YES! You are correct."
-      # else
-      #   puts "#{@current_player.name}: Seriously? No!"
-      #   @current_player.lose_life
-      # end
-
       check_answer(player_answer)
 
       puts summary
 
     end
 
-    puts "----- GAME OVER -----"
+    winner = find_winner
+    puts "#{winner.name} wins with a score of #{winner.lives}/3"
 
   end
 
